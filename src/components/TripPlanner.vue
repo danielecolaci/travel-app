@@ -20,6 +20,10 @@
                     <input type="url" class="form-control" v-model="stages[day - 1].link">
                 </div>
                 <div class="mb-3">
+                    <label class="form-label">Location</label>
+                    <input type="text" class="form-control" v-model="stages[day - 1].location">
+                </div>
+                <div class="mb-3">
                     <label class="form-label">Price</label>
                     <input type="number" class="form-control" v-model="stages[day - 1].price">
                 </div>
@@ -30,12 +34,16 @@
                         <img :src="stages[day - 1].image" alt="Day Image" class="img-fluid"
                             style="max-height: 200px; object-fit: cover;">
                     </div>
+                    <!-- <div class="mb-3 mt-3 form-check">
+                        <input type="checkbox" class="form-check-input" v-model="stages[day - 1].completed">
+                        <label class="form-check-label">Stage Completed</label>
+                    </div> -->
                 </div>
             </div>
         </div>
 
-        <router-link to="/" class="btn btn-secondary mt-3">Go Back</router-link>
-        <button class="btn btn-success mt-3" @click="saveTrip">Save Trip</button>
+        <router-link to="/" class="btn btn-secondary my-5 me-3">Go Back</router-link>
+        <button class="btn btn-success my-5" @click="saveTrip">Save Trip</button>
 
     </div>
 </template>
@@ -70,7 +78,9 @@ export default {
             description: '',
             link: '',
             price: '',
-            image: ''
+            image: '',
+            location: '',
+            completed: false
         }));
     },
     methods: {
