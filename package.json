@@ -10,11 +10,15 @@
   },
   "dependencies": {
     "leaflet": "^1.9.4",
+    "lucide-vue-next": "^1.0.0",
     "vue": "^3.4.37",
     "vue-router": "^4.4.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.13",
+    "tailwindcss": "^3.4.19",
     "vite": "^5.4.1"
   }
 }
